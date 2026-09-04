@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner's Python & Data Analytics Bootcamp — KDAG</title>
+  <meta name="description"
+    content="A hands-on, beginner-friendly bootcamp on Python and Data Analytics, hosted by the Kharagpur Data Analytics Group." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e2372c'/%3E%3Cpolyline points='0,65 15,45 38,70 88,42 100,52' fill='none' stroke='%23000' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='15' cy='45' r='5' fill='%23000'/%3E%3Ccircle cx='38' cy='70' r='5' fill='%23000'/%3E%3Ccircle cx='88' cy='42' r='5' fill='%23000'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-brand">
+        <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" fill="#e2372c" rx="8" />
+          <polyline points="0,65 15,45 38,70 88,42 100,52" fill="none" stroke="#000000" stroke-width="6"
+            stroke-linejoin="round" stroke-linecap="round" />
+          <circle cx="15" cy="45" r="5" fill="#000000" />
+          <circle cx="38" cy="70" r="5" fill="#000000" />
+          <circle cx="88" cy="42" r="5" fill="#000000" />
+        </svg>
+        <span class="nav-brand-text">KHARAGPUR DATA<br>ANALYTICS <span>GROUP</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#schedule">Schedule</a>
+        <a href="register.html" class="nav-cta">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="hero-net" viewBox="0 0 1120 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g stroke="#e2372c" stroke-opacity="0.18" stroke-width="1">
+        <line x1="40" y1="60" x2="220" y2="150" />
+        <line x1="220" y1="150" x2="140" y2="300" />
+        <line x1="220" y1="150" x2="400" y2="90" />
+        <line x1="140" y1="300" x2="60" y2="430" />
+        <line x1="140" y1="300" x2="330" y2="360" />
+        <line x1="400" y1="90" x2="600" y2="40" />
+        <line x1="400" y1="90" x2="560" y2="220" />
+        <line x1="560" y1="220" x2="330" y2="360" />
+        <line x1="560" y1="220" x2="760" y2="180" />
+        <line x1="760" y1="180" x2="960" y2="120" />
+        <line x1="760" y1="180" x2="900" y2="330" />
+        <line x1="330" y1="360" x2="480" y2="480" />
+        <line x1="480" y1="480" x2="700" y2="520" />
+        <line x1="900" y1="330" x2="700" y2="520" />
+        <line x1="900" y1="330" x2="1080" y2="380" />
+        <line x1="960" y1="120" x2="1080" y2="200" />
+      </g>
+      <g fill="#e2372c" fill-opacity="0.55">
+        <circle cx="220" cy="150" r="3" />
+        <circle cx="140" cy="300" r="3" />
+        <circle cx="400" cy="90" r="3" />
+        <circle cx="560" cy="220" r="3" />
+        <circle cx="330" cy="360" r="3" />
+        <circle cx="760" cy="180" r="3" />
+        <circle cx="900" cy="330" r="3" />
+        <circle cx="960" cy="120" r="3" />
+        <circle cx="700" cy="520" r="3" />
+        <circle cx="480" cy="480" r="3" />
+      </g>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <h1>Beginner's Python &amp; Data <span class="accent">Analytics</span> Bootcamp</h1>
+      <p class="hero-sub">Three evenings to go from a blank script to your first data-driven insight — taught by the
+        Machine Learning society at IIT Kharagpur.</p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary">Register for the bootcamp</a>
+        <a href="#curriculum" class="btn btn-ghost">See what you'll build</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num"><span class="accent">3</span> days</div>
+          <div class="label">Evening sessions, live</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">Zero</div>
+          <div class="label">Prior coding experience needed</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">1</div>
+          <div class="label">Real dataset, start to finish</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="about-copy">
+          <p>KDAG is the Machine Learning society at IIT Kharagpur — we run projects, competitions, and workshops for
+            anyone curious about data, from complete beginners to Kaggle regulars.</p>
+          <p>This bootcamp is our entry point. Over three sessions you'll write your first Python scripts, wrangle a
+            real dataset with Pandas, and walk away with a chart and a conclusion you found yourself — no prerequisites
+            beyond curiosity.</p>
+        </div>
+      </div>
+      <div class="about-facts">
+        <div class="fact">
+          <div class="fact-label">Who it's for</div>
+          <div class="fact-value">First and second-year undergrads, any department</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">Format</div>
+          <div class="fact-value">Live, in-person sessions with take-home exercises</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">What to bring</div>
+          <div class="fact-value">A laptop — we'll set up Python together on day one</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="curriculum">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What you'll learn</h2>
+        <p>Each module builds on the last, so by the final session you're analysing data end to end.</p>
+      </div>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <div class="n">01</div>
+          <h3>Python Fundamentals</h3>
+          <p>Variables, loops, functions, and enough syntax to stop fearing a blank script.</p>
+        </div>
+        <div class="learn-card">
+          <div class="n">02</div>
+          <h3>NumPy &amp; Pandas</h3>
+          <p>Loading, cleaning, and reshaping real tabular data without losing your mind.</p>
+        </div>
+        <div class="learn-card">
+          <div class="n">03</div>
+          <h3>Data Visualization</h3>
+          <p>Turning a dataframe into a chart that actually answers a question.</p>
+        </div>
+        <div class="learn-card">
+          <div class="n">04</div>
+          <h3>Intro to ML</h3>
+          <p>A first look at how a model learns, using a dataset you already understand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline" id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three evenings, start to finish</h2>
+        <p>Sessions run in the evening so they don't clash with classes.</p>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-day">DAY 1</div>
+          <div class="timeline-body">
+            <h3>Python from zero</h3>
+            <p>Environment setup, core syntax, and your first working script.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">DAY 2</div>
+          <div class="timeline-body">
+            <h3>Working with real data</h3>
+            <p>NumPy and Pandas on a live dataset — cleaning, filtering, grouping.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">DAY 3</div>
+          <div class="timeline-body">
+            <h3>Insight and a first model</h3>
+            <p>Visualising your findings and training a simple predictive model.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Seats are limited to keep it hands-on.</h2>
+      <p>Registration takes under a minute — bring your roll number and college email.</p>
+      <a href="register.html" class="btn btn-primary">Register for the bootcamp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-copy">Kharagpur Data Analytics Group — IIT Kharagpur</div>
+      <div class="foot-links">
+        <a href="register.html">Register</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#" id="adminLink">Admin Dashboard</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

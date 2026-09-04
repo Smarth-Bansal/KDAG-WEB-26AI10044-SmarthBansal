@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — KDAG Bootcamp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .admin-main {
+            padding: 100px 0;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 32px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th,
+        td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+        }
+
+        th {
+            font-size: 12.5px;
+            text-transform: uppercase;
+            color: var(--grey-dim);
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            font-size: 14.5px;
+            color: var(--white);
+        }
+
+        .empty-state {
+            padding: 48px;
+            text-align: center;
+            color: var(--grey);
+        }
+
+        @media (max-width: 720px) {
+            .admin-main {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="wrap">
+            <a href="index.html" class="nav-brand">
+                <span class="nav-mark" aria-hidden="true"></span>
+                <span class="nav-brand-text">KHARAGPUR DATA<br>ANALYTICS <span>GROUP</span></span>
+            </a>
+            <div class="nav-links" style="display: flex;">
+                <a href="index.html" class="btn btn-ghost" style="padding: 8px 16px; font-size: 13px;">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="admin-main wrap">
+        <div class="section-head" style="margin-bottom: 32px;">
+            <h2>Bootcamp Registrations</h2>
+            <p>Locally stored submissions for the current device.</p>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Time Submitted</th>
+                    </tr>
+                </thead>
+                <tbody id="registrationTableBody">
+                    <!-- Data will be injected here via JavaScript -->
+                </tbody>
+            </table>
+            <div id="emptyMessage" class="empty-state" style="display: none;">
+                No registrations found on this device yet.
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tableBody = document.getElementById("registrationTableBody");
+            const emptyMessage = document.getElementById("emptyMessage");
+
+            // Fetch data from local storage (the same key used in script.js)
+            const registrations = JSON.parse(localStorage.getItem("kdagBootcampRegistrations")) || [];
+
+            if (registrations.length === 0) {
+                emptyMessage.style.display = "block";
+            } else {
+                // Loop through the data and create table rows
+                registrations.forEach(function (reg) {
+                    const row = document.createElement("tr");
+
+                    // Format the timestamp to a readable date/time
+                    const date = new Date(reg.timestamp);
+                    const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    const dateString = date.toLocaleDateString();
+
+                    row.innerHTML = `
+          <td><strong>${reg.name}</strong></td>
+          <td style="color: var(--red); font-family: var(--font-display); font-size: 13.5px;">${reg.rollNumber}</td>
+          <td>${reg.email}</td>
+          <td>${reg.department}</td>
+          <td style="color: var(--grey-dim); font-size: 13px;">${dateString} at ${timeString}</td>
+        `;
+                    tableBody.appendChild(row);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

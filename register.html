@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Beginner's Python & Data Analytics Bootcamp | KDAG</title>
+  <meta name="description" content="Register for KDAG's Beginner's Python & Data Analytics Bootcamp." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e2372c'/%3E%3Cpolyline points='0,65 15,45 38,70 88,42 100,52' fill='none' stroke='%23000' stroke-width='6' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='15' cy='45' r='5' fill='%23000'/%3E%3Ccircle cx='38' cy='70' r='5' fill='%23000'/%3E%3Ccircle cx='88' cy='42' r='5' fill='%23000'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-brand">
+        <svg class="nav-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <rect width="100" height="100" fill="#e2372c" rx="8" />
+          <polyline points="0,65 15,45 38,70 88,42 100,52" fill="none" stroke="#000000" stroke-width="6"
+            stroke-linejoin="round" stroke-linecap="round" />
+          <circle cx="15" cy="45" r="5" fill="#000000" />
+          <circle cx="38" cy="70" r="5" fill="#000000" />
+          <circle cx="88" cy="42" r="5" fill="#000000" />
+        </svg>
+        <span class="nav-brand-text">KHARAGPUR DATA<br>ANALYTICS <span>GROUP</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#curriculum">Curriculum</a>
+        <a href="index.html#schedule">Schedule</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="reg-shell">
+    <aside class="reg-side">
+      <svg class="reg-side-net" viewBox="0 0 560 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g stroke="#e2372c" stroke-opacity="0.18" stroke-width="1">
+          <line x1="40" y1="60" x2="180" y2="160" />
+          <line x1="180" y1="160" x2="90" y2="300" />
+          <line x1="180" y1="160" x2="360" y2="120" />
+          <line x1="90" y1="300" x2="220" y2="420" />
+          <line x1="360" y1="120" x2="480" y2="220" />
+          <line x1="220" y1="420" x2="380" y2="500" />
+          <line x1="380" y1="500" x2="300" y2="640" />
+          <line x1="480" y1="220" x2="420" y2="400" />
+          <line x1="420" y1="400" x2="380" y2="500" />
+        </g>
+        <g fill="#e2372c" fill-opacity="0.55">
+          <circle cx="180" cy="160" r="3" />
+          <circle cx="90" cy="300" r="3" />
+          <circle cx="360" cy="120" r="3" />
+          <circle cx="220" cy="420" r="3" />
+          <circle cx="480" cy="220" r="3" />
+          <circle cx="380" cy="500" r="3" />
+          <circle cx="420" cy="400" r="3" />
+          <circle cx="300" cy="640" r="3" />
+        </g>
+      </svg>
+
+      <div class="reg-side-content">
+        <h2>Reserve your seat for the cohort.</h2>
+        <p>Fill in your details on the right. You'll get a confirmation the moment you submit.</p>
+      </div>
+
+      <div class="reg-side-foot">
+        <div class="row"><strong>01</strong> Three evening sessions, fully in-person.</div>
+        <div class="row"><strong>02</strong> Open to every department, first come first served.</div>
+        <div class="row"><strong>03</strong> Bring a laptop — everything else is provided.</div>
+      </div>
+    </aside>
+
+    <main class="reg-main">
+      <div class="reg-form-wrap">
+        <h1>Register for the bootcamp</h1>
+        <p class="reg-lede">Takes under a minute. Use your official college email and roll number.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="field" id="nameField">
+            <label for="name">Full name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g. Aditi Sharma" autocomplete="name" />
+            <div class="field-error-msg">Please enter your full name.</div>
+          </div>
+
+          <div class="field" id="rollField">
+            <label for="roll">Roll number <span class="req">*</span></label>
+            <input type="text" id="roll" name="roll" placeholder="e.g. 26XX10001" maxlength="9" autocomplete="off" />
+            <div class="field-hint">Format: 25 or 26 + 2 letters + 5 digits (e.g., 26XX10001).</div>
+            <div class="field-error-msg">Only 1st and 2nd year roll numbers (starting with 25 or 26) are accepted.</div>
+          </div>
+
+          <div class="field" id="emailField">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@kgpian.iitkgp.ac.in" autocomplete="email" />
+            <div class="field-error-msg">Please enter a valid official IIT KGP email (e.g., @kgpian.iitkgp.ac.in).</div>
+          </div>
+
+          <div class="field" id="deptField">
+            <label for="department">Department <span class="req">*</span></label>
+            <select id="department" name="department">
+              <option value="" selected disabled>Select your department</option>
+              <option>Aerospace Engineering</option>
+              <option>Agricultural and Food Engineering</option>
+              <option>Architecture and Regional Planning</option>
+              <option>Artificial Intelligence</option>
+              <option>Biotechnology and Biochemical Engg.</option>
+              <option>Chemical Engineering</option>
+              <option>Chemistry</option>
+              <option>Civil Engineering</option>
+              <option>Computer Science and Engineering</option>
+              <option>Economics</option>
+              <option>Electrical Engineering</option>
+              <option>Electronics and Electrical Communication Engg.</option>
+              <option>Geology and Geophysics</option>
+              <option>Industrial and Systems Engineering</option>
+              <option>Instrumentation Engineering</option>
+              <option>Manufacturing Science and Engineering</option>
+              <option>Mathematics and Computing</option>
+              <option>Mechanical Engineering</option>
+              <option>Metallurgical and Materials Engg.</option>
+              <option>Mining Engineering</option>
+              <option>Ocean Engineering and Naval Architecture</option>
+              <option>Physics</option>
+              <option>Other</option>
+            </select>
+            <div class="field-error-msg">Please select your department.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Register</button>
+          <p class="form-note">By registering you agree to receive bootcamp updates over email.</p>
+        </form>
+
+        <div class="success-panel" id="successPanel">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12.5L9.5 18L20 6" stroke="white" stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h2>Registration submitted</h2>
+          <p>We've received your details. Your seat isn't confirmed yet — we'll email you once it's verified, ahead of
+            Day 1.</p>
+          <a href="index.html" class="btn btn-ghost">Back to home</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
